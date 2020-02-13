@@ -1,0 +1,580 @@
+  /* The switch - the box around the slider */
+  
+  body {
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+  }
+  
+  ul {
+      margin: 0;
+      padding: 0;
+  }
+  
+  p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  input:focus {
+      outline: none;
+      box-shadow: none;
+  }
+  
+  .redes a {
+      color: #0E0C1F !important;
+  }
+  
+  a:hover {
+      text-decoration: none;
+  }
+  
+  .redes-footer a {
+      margin: 0 .5rem;
+  }
+  
+  .partner h1 {
+      font-size: 1.5rem;
+  }
+  
+  p,
+  h1,
+  h2,
+  span {
+      color: #34506b;
+  }
+  
+  .texto-rino p,
+  .texto-rino h2 {
+      color: white;
+  }
+  
+  .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 24px;
+      margin: 1rem;
+  }
+  /* Hide default HTML checkbox */
+  
+  .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
+  /* The slider */
+  
+  .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+  }
+  
+  .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+  }
+  
+  input:checked+.slider {
+      background-color: #2196F3;
+  }
+  
+  input:focus+.slider {
+      box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked+.slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+  }
+  /* Rounded sliders */
+  
+  .slider.round {
+      border-radius: 34px;
+  }
+  
+  .slider.round:before {
+      border-radius: 50%;
+  }
+  
+  .search {
+      position: relative;
+      color: #aaa;
+      font-size: 14px;
+  }
+  
+  .search input {
+      width: 100%;
+      height: 45px;
+      text-indent: 32px;
+      background: #e5ecf2;
+      border: 0px transparent;
+      border-radius: 25px;
+      /* box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset; */
+  }
+  
+  .search .fa-user {
+      position: absolute;
+      top: 35%;
+      left: 88%;
+  }
+  
+  .search .fa-lock {
+      position: absolute;
+      top: 35%;
+      left: 88%;
+  }
+  
+  .btn:focus {
+      box-shadow: none;
+      outline: none;
+  }
+  
+  .btn-dark {
+      background-color: #0E0C1F !important;
+  }
+  
+  .circle {
+      color: #50C670 !important;
+  }
+  
+  .buton {
+      background-color: #0E0C1F !important;
+      border: none;
+  }
+  
+  .btn {
+      padding: .5rem 2rem;
+      border-radius: 10px;
+      
+  }
+  
+  .btn-grad,
+  .btn .btn-outline-dark {
+      color: white;
+      background: #B2BDC7;
+      margin-bottom: 1rem;
+  }
+  
+  .btn .btn-outline-dark {
+      border-radius: 16px;
+  }
+  
+  .btn-grad:hover {
+      background-position: right center;
+  }
+  
+  .btn-2 {
+      border: 1;
+      border-color: #000;
+      color: #000;
+      border-radius: 25px;
+      padding: 8px;
+      margin: 4px 2px;
+      background-color: #ffffff;
+      border-width: thin;
+  }
+  
+  .welcome {
+      font-size: 20px;
+  }
+  
+  .check {
+      color: #aaa;
+  }
+  
+  input[type="checkbox"]:checked {
+      box-shadow: 0 0 0 3;
+  }
+  
+  .formregister {
+      background-image: url(../img/recurso14.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #e5ecf2;
+  }
+  
+  .content-form-register {
+      background: white;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+     
+  }
+  
+  .texto-rino {
+      padding: 4rem 1rem 0 1rem;
+      text-align: center;
+  }
+  
+  .texto-rino h2,
+  .texto-rino p {
+      color: black;
+  }
+  
+  .text-center h2{
+      font-size: 26px;
+  }
+  @media only screen and (min-width:768px) {
+      .content-form-register {
+          margin: 5rem 7rem;
+          padding: 3rem 5rem;
+      }
+      .texto-rino h2,
+      .texto-rino p {
+          color: white;
+      }
+      .texto-rino {
+          padding: 0;
+          text-align: left;
+      }
+      .texto-rino h2 {
+          font-size: 1rem;
+      }
+  }
+  
+  @media only screen and (min-width:993px) {
+      .texto-rino h2 {
+          font-size: 2rem;
+      }
+  }
+  
+  .actions {
+      align-items: center;
+  }
+  
+  .section-1 {
+      box-shadow: 0 0 15px 0 rgba(189, 189, 189, 0.2);
+  }
+  
+  .text-welcome {
+      width: 80%;
+      text-align: justify;
+      margin: 0 auto;
+  }
+  
+  .date-register {}
+  
+  .date-register h1 {
+      font-size: 1.5rem;
+  }
+  
+  .partners {
+      text-align: center;
+  }
+  
+  .partners>div img {
+      width: 200px;
+      margin: 1rem auto;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      font h2 {
+          color: white;
+      }
+      .partners>div img {
+          width: 100%;
+      }
+  }
+  
+  @media only screen and (min-width: 993px) {
+      font h2 {
+          color: white;
+      }
+      .partners>div img {
+          width: 100%;
+      }
+  }
+  
+  @media only screen and (min-width: 993px) {
+      font h2 {
+          color: white;
+      }
+  }
+  
+  .date-register h2 {
+      font-size: 1.5rem;
+  }
+  
+  .more .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .more .item i {
+      padding-left: .5rem;
+      padding-top: .3rem;
+  }
+  
+  .images-home img {
+      width: 70%;
+      margin: 0 auto;
+  }
+  
+  .rino {
+      padding: 1rem 0;
+  }
+  
+  .bg-dark {
+      background-color:#16161E !important;
+  }
+  
+  footer {
+      background-color:#16161E !important;
+  }
+  /*ABOUT*/
+  
+  .recursos .item>div {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1rem;
+      color: black;
+  }
+  
+  .recursos .item>div h2 {
+      font-size: 1.2rem;
+      color: #9DA7AE;
+      font-weight: 500;
+  }
+  
+  .recursos .item>div p {
+      color: #9DA7AE;
+      font-weight: 500;
+      font-size: .8rem;
+  }
+  
+  .recursos .item>div img {
+      width: 80px;
+      margin: 1rem 0;
+  }
+  
+  .rino4 {
+      background-color: #000000;
+  }
+  
+  .title {
+      color: black;
+      position: relative;
+      top: 5px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      .title {
+          color: white;
+          position: relative;
+          top: -110px;
+      }
+      .recursos .item>div {
+          height: auto;
+      }
+  }
+  
+  .about-text h1 {
+      font-size: 1.4rem;
+  }
+  
+  .contact h1,
+  .contact p {
+      color: black;
+  }
+  
+  .contact {
+      top: 1rem!important;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      .contact h1,
+      .contact p {
+          color: white;
+      }
+      .contact {
+          top: 0rem!important;
+      }
+  }
+  
+  @media only screen and (min-width: 993px) {
+      .contact h1,
+      .contact p {
+          color: white;
+      }
+      .title {
+          position: relative;
+          top: 0px;
+      }
+      .recursos .item>div {
+          height: 360px;
+      }
+      .rino {
+          padding: 9rem 0;
+      }
+  }
+  /*ABOUT*/
+  
+  .title {
+      position: relative;
+      top: -2rem;
+  }
+  
+  .title h1 {
+      font-size: 2.5rem;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      .title {
+          position: relative;
+          top: 0rem;
+      }
+      .title h1 {
+          font-size: 3rem;
+      }
+  }
+  
+  .social {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px;
+      position: relative;
+      top: 5rem;
+  }
+  
+  .background-con {
+      padding: 0;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      .social {
+          top: 0rem;
+      }
+      .background-con {
+          padding: 0;
+      }
+  }
+  
+  a {
+      color: black;
+      text-decoration: none;
+  }
+  
+  @media only screen and (min-width: 993px) {
+      .social {
+          top: 8rem;
+      }
+      .background-con {
+          padding: 5rem 0 10rem 0;
+      }
+  }
+  
+  .social a {
+      text-align: center;
+      color: #718CA8;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin: .5rem;
+  }
+  
+  .textos-contact h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+  }
+  
+  .social a i {
+      text-align: center;
+      color: #718CA8;
+      font-size: 2rem;
+  }
+  
+  .rino2 {
+      background-color: #ffffff;
+      width: 80%;
+      border-radius: 20px;
+      margin: 30px auto;
+      padding: 1rem;
+  }
+  
+  .btn-contact {
+      background: rgb(0, 0, 0);
+      color: white;
+      width: 80%;
+      margin: 0 auto;
+  }
+  
+  .span-contact {
+      color: rgb(0, 0, 0);
+  }
+  
+  @media only screen and (min-width: 993px) {
+      .rino2 {
+          padding: 5rem;
+      }
+      .btn-contact {
+          width: 40%;
+      }
+      .span-contact {
+          color: white;
+      }
+  }
+  
+  .title-contact h1 {
+      color: white;
+  }
+  
+  .rino4 {
+      background-color: #000000;
+  }
+  
+  .box-contain {
+      width: 95%;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+      border-radius: 6px;
+      position: relative;
+      top: -4rem;
+      background: white;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      .box-contain {
+          width: 80%;
+      }
+  }
+  
+  .item {
+      padding: 2rem;
+      background: #f9f9f9;
+  }
+  
+  .recursos>.item {
+      background: transparent;
+  }
+
